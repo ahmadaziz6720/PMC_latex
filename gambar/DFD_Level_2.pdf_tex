@@ -1,0 +1,89 @@
+%% Creator: Inkscape 1.1.2 (b8e25be833, 2022-02-05), www.inkscape.org
+%% PDF/EPS/PS + LaTeX output extension by Johan Engelen, 2010
+%% Accompanies image file 'DFD_Level_2.pdf' (pdf, eps, ps)
+%%
+%% To include the image in your LaTeX document, write
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics{<filename>.pdf}
+%% To scale the image, write
+%%   \def\svgwidth{<desired width>}
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics[width=<desired width>]{<filename>.pdf}
+%%
+%% Images with a different path to the parent latex file can
+%% be accessed with the `import' package (which may need to be
+%% installed) using
+%%   \usepackage{import}
+%% in the preamble, and then including the image with
+%%   \import{<path to file>}{<filename>.pdf_tex}
+%% Alternatively, one can specify
+%%   \graphicspath{{<path to file>/}}
+%% 
+%% For more information, please see info/svg-inkscape on CTAN:
+%%   http://tug.ctan.org/tex-archive/info/svg-inkscape
+%%
+\begingroup%
+  \makeatletter%
+  \providecommand\color[2][]{%
+    \errmessage{(Inkscape) Color is used for the text in Inkscape, but the package 'color.sty' is not loaded}%
+    \renewcommand\color[2][]{}%
+  }%
+  \providecommand\transparent[1]{%
+    \errmessage{(Inkscape) Transparency is used (non-zero) for the text in Inkscape, but the package 'transparent.sty' is not loaded}%
+    \renewcommand\transparent[1]{}%
+  }%
+  \providecommand\rotatebox[2]{#2}%
+  \newcommand*\fsize{\dimexpr\f@size pt\relax}%
+  \newcommand*\lineheight[1]{\fontsize{\fsize}{#1\fsize}\selectfont}%
+  \ifx\svgwidth\undefined%
+    \setlength{\unitlength}{519bp}%
+    \ifx\svgscale\undefined%
+      \relax%
+    \else%
+      \setlength{\unitlength}{\unitlength * \real{\svgscale}}%
+    \fi%
+  \else%
+    \setlength{\unitlength}{\svgwidth}%
+  \fi%
+  \global\let\svgwidth\undefined%
+  \global\let\svgscale\undefined%
+  \makeatother%
+  \begin{picture}(1,0.36127168)%
+    \lineheight{1}%
+    \setlength\tabcolsep{0pt}%
+    \put(0,0){\includegraphics[width=\unitlength,page=1]{DFD_Level_2.pdf}}%
+    \put(0.23988439,0.29913295){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}Video\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=2]{DFD_Level_2.pdf}}%
+    \put(0.39017341,0.01011561){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}Video\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=3]{DFD_Level_2.pdf}}%
+    \put(0.0867052,0.29768786){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}Video Database\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=4]{DFD_Level_2.pdf}}%
+    \put(0.31791908,0.20809249){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}Boundaries\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=5]{DFD_Level_2.pdf}}%
+    \put(0.40895954,0.2066474){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}Key...\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=6]{DFD_Level_2.pdf}}%
+    \put(0.36127168,0.29768786){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}Shot Boundary...\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=7]{DFD_Level_2.pdf}}%
+    \put(0.6199422,0.06936416){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}Key...\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=8]{DFD_Level_2.pdf}}%
+    \put(0.59104046,0.11849711){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}Boundaries\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=9]{DFD_Level_2.pdf}}%
+    \put(0.36127168,0.09537572){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}Anotation Database\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=10]{DFD_Level_2.pdf}}%
+    \put(0.75722543,0.27745665){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}Story...\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=11]{DFD_Level_2.pdf}}%
+    \put(0.63583815,0.29768786){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}Story Board P...\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=12]{DFD_Level_2.pdf}}%
+    \put(0.75578035,0.32080925){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}Browse...\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=13]{DFD_Level_2.pdf}}%
+    \put(0.8699422,0.19797688){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}Shot Preview...\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=14]{DFD_Level_2.pdf}}%
+    \put(0.91040462,0.29768786){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}User\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=15]{DFD_Level_2.pdf}}%
+    \put(0.95086705,0.19653179){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}Shot\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=16]{DFD_Level_2.pdf}}%
+    \put(0.91040462,0.09537572){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}Shot Preview\end{tabular}}}}%
+  \end{picture}%
+\endgroup%
