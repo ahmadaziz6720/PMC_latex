@@ -1,6 +1,7 @@
 \documentclass[conference]{IEEEtran}
 \IEEEoverridecommandlockouts
 \usepackage{cite}
+\usepackage{hyperref}
 \usepackage{amsmath,amssymb,amsfonts}
 \usepackage{algorithmicx}
 \usepackage{graphicx}
@@ -169,6 +170,112 @@ Setelah itu, tahap selanjutnya yang dilakukan oleh peneliti adalah pembuatan pro
 
     Program utama akan membaca file database tanaman beserta jarak masing-masing tanaman dan akan mencetak daftar tanaman yang berada di Kebun Raya Purwodadi. Kemudian, program akan menerima input salah satu tanaman terdekat dari pengguna sebagai penanda posisi awal pengguna. Setelah itu, program akan kembali menerima input posisi tanaman tujuan dan memproses pencarian rute terdekat dengan algoritma Dijkstra. Rute yang diperlukan akan ditampilkan dalam bentuk list nama tanaman yang harus dilalui pengguna dan menampilkan jarak antara kedua tanaman tersebut. Implementasi algoritma dalam abstraksi tersebut dapat dilihat pada gambar di bawah ini:
 
+    \begin{algorithm}
+        \caption{Program Utama Pencarian Rute Antara Dua Tanaman - Pembacaan Jumlah Tanaman} 
+        \textbf{Result: } Menyimpan nama tanaman pada sebuah array\\
+        \textbf{Algorithm: }\\
+        \textbf{input}\textit{(namafile\_tanaman)}\\
+        \textbf{open}\textit{(namafile\_tanaman)}\\
+        \textbf{read}\textit{(namafile\_tanaman)}\\
+        \textit{n\_tanaman $\leftarrow$ 0;}\\
+        \textit{baris $\leftarrow$ 0;}
+        \begin{algorithmic}[1]
+            \While{$baris \leq max\_len$}
+                \State $token \leftarrow baris;$
+                \State $token \leftarrow nama\_tanaman[n\_tanaman];$
+                \State $n\_tanaman \leftarrow n\_tanaman+1;$
+                \State $baris \leftarrow baris+1;$
+            \EndWhile{}{\textbf{end}}
+        \end{algorithmic}
+    \end{algorithm}
+
+    Setelah pembacaan jumlah tanaman dari file, maka diperlukan graph atau jarak antar tanaman yang akan menjadi dasar perhitungan dari pencarian rute terdekat. Proses memasukkan graph dapat dilihat pada algoritma berikut ini:
+
+    \begin{algorithm}
+        \caption{ Program Utama Pencarian Rute Antara Dua Tanaman - Memasukkan Graph} 
+        \textbf{Result: } Menyimpan graph dalam sebuah matriks $n \times n$\\
+        \textbf{input}\textit{(namafile\_graph)}\\
+        \textbf{open}\textit{(namafile\_graph)}\\
+        \textbf{read}\textit{(namafile\_graph)}\\
+        \textit{baris $\leftarrow$ 0: }\\
+        \textbf{Algorithm: }
+
+        \begin{algorithmic}[1]
+            \While{$baris \leq max\_len$}
+                \State $k \leftarrow 0;$
+                \State $token \leftarrow parse(baris));$
+                \While{$token != NULL$ }
+                    \State $graph[j][k] \leftarrow token;$
+                    \State $graph[k][j] \leftarrow token;$
+
+                    \If{$token = -1$ }
+                        \State $graph[j][k] \leftarrow int\_max;$
+                        \State $graph[k][j] \leftarrow int\_max;$
+                    \Else
+                        \State $k \leftarrow k+1;$
+                        \State $token \leftarrow parse(NULL));$
+                    \EndIf{}{\textbf{end}}
+                \EndWhile{}{\textbf{end}}
+                \State $baris \leftarrow baris+1;$
+            \EndWhile{}{\textbf{end}}
+        \end{algorithmic}
+    \end{algorithm}
+
+    Setelah data yang dibutuhkan dimasukkan, implementasi dari algoritma Dijkstra untuk pencarian rute terdekat adalah sebagai berikut:
+
+    \begin{algorithm}
+        \caption{Program Utama Pencarian Rute Antara Dua Tanaman: Pencarian Jarak dengan Algoritma Dijkstra} 
+        \textbf{input}\textit{(idx\_a)}\\
+        \textit{idx\_a $\leftarrow$ idx\_a-1;}\\
+        \textbf{input}\textit{(idx\_tujuan)}\\
+        \textit{idx\_tujuan $\leftarrow$ idx\_tujuan-1;}\\
+        \textbf{Algorithm: }
+
+        \begin{algorithmic}[1]
+            \For{$i=0 \textbf{ to } n\_tanaman$}
+                \If{$i=idx\_a$ }
+                    \State $jarak\_f[i] \leftarrow 0;$
+                    \State $is\_final[i] \leftarrow FALSE;$
+                \Else
+                    \State $jarak\_f[i] \leftarrow int\_max;$
+                    \State $is\_final[i] \leftarrow FALSE;$
+                \EndIf{}{\textbf{end}}
+                \For{$j=0 \textbf{ to } n\_tanaman$}
+                    \State $idx\_lalui[i] \leftarrow 0;$
+                \EndFor{}{\textbf{end}}
+            \EndFor{}{\textbf{end}}
+
+            \State $jarak\_f[idx\_a] \leftarrow 0;$
+            \State $list\_dilalui[idx\_a][0] \leftarrow idx\_a;$
+            \State $idx\_lalui[idx\_a] \leftarrow idx\_lalui[idx\_a]+1;$
+            \State $idx\_now \leftarrow idx\_a;$
+
+        \end{algorithmic}
+    \end{algorithm}
+
+    \subsection{Implementasi Program dalam Bahasa C}
+    Implementasi program dalam bahasa C dapat dilihat pada repository berikut. \url{https://github.com/ReynaldoAverill/Tugas7PMC}
+
+    \subsection{Perhitungan Kompleksitas Waktu}
+    Kompleksitas dari program ini dengan notasi kompleksitas Big O adalah O(n2). Hal tersebut disebabkan pada loop program bagian for, terdapat loop for lain yang berjumlah dua loop (Terletak pada bagian assign kondisi awal dan ketika program menjalankan algoritma Djikstra). Karena hal tersebut, akibatnya adalah kompleksitas waktu akan naik seiring dengan naiknya n program yang dijalankan, namun tidak bersifat linear sehingga kompleksitas waktunya adalah O(n2). Grafik kompleksitas waktu dapat direpresentasikan pada gambar 1.
+
+    \begin{figure}[htbp]
+        \centering
+        \scalebox{0.4}{\input{gambar/big_O.pdf_tex}}
+        \caption{Kompleksitas Tempat Program}
+    \end{figure}
+
+    \subsection{Perhitungan Kompleksitas Tempat}
+    Matriks penyimpanan yang digunakan pada program ini memiliki ukuran terbesar $n \times n$, dengan nilai n merepresentasikan banyak tanaman dalam file listtanaman txt. Program akan melalui grafik dan menyimpan nilai bobot antara node sebesar matriks di atas, mengakibatkan program dengan kompleksitas O(n2). Hal ini dapat dilihat pada grafik kompleksitas tempat di gambar 2.
+
+    \begin{figure}[htbp]
+        \centering
+        \scalebox{0.4}{\input{gambar/big_O.pdf_tex}}
+        \caption{Kompleksitas Tempat Program}
+    \end{figure}
+
+    \subsection{Kesimpulan}
+    Pada perhitungan Jarak Terdekat dalam suatu lokasi atau ruang dapat diimplementasikan penggunaan Algoritma Djikstra dalam perhitungannya untuk mencapai suatu target pada ruang tersebut dari suatu titik. Terbukti dari penelitian Kebun Raya Purwodadi untuk menentukan Tanaman yang ingin dituju.
 % Referensi
 \bibliographystyle{IEEEtran}
 \bibliography{references.bib}
